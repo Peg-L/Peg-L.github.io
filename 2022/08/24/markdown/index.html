@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Markdown | 阿榮的時光膠囊</title><meta name="keywords" content="前端"><meta name="author" content="Peggy Lin"><meta name="copyright" content="Peggy Lin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Markdown(MD) 易讀易寫 很多軟體和服務支援 (Obsidian, Notion, Github, HackMD…等)     資源 Sources 官方文件(中)  官方文件(Eng)  Youtube 教學影片(Eng): Learn Markdown in 30 minutes!      預覽 Preview使用 VS Code 編輯 MD，先打開預覽頁面，可在編輯時同時觀看頁面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown">
+<meta property="og:url" content="http://example.com/2022/08/24/markdown/index.html">
+<meta property="og:site_name" content="阿榮的時光膠囊">
+<meta property="og:description" content="Markdown(MD) 易讀易寫 很多軟體和服務支援 (Obsidian, Notion, Github, HackMD…等)     資源 Sources 官方文件(中)  官方文件(Eng)  Youtube 教學影片(Eng): Learn Markdown in 30 minutes!      預覽 Preview使用 VS Code 編輯 MD，先打開預覽頁面，可在編輯時同時觀看頁面">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-08-24T12:10:22.000Z">
+<meta property="article:modified_time" content="2022-08-25T04:08:57.856Z">
+<meta property="article:author" content="Peggy Lin">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/08/24/markdown/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Markdown',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-25 12:08:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/front-end/"><i class="fa-fw fas fa-television"></i><span> 前端</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bolt"></i><span> creation</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音樂</span></a></li><li><a class="site-page child" href="/artwork/"><i class="fa-fw fa-solid fa-palette"></i><span> 藝術</span></a></li><li><a class="site-page child" href="/articles/"><i class="fa-fw fas fa-pencil"></i><span> 隨筆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">阿榮的時光膠囊</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/front-end/"><i class="fa-fw fas fa-television"></i><span> 前端</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bolt"></i><span> creation</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音樂</span></a></li><li><a class="site-page child" href="/artwork/"><i class="fa-fw fa-solid fa-palette"></i><span> 藝術</span></a></li><li><a class="site-page child" href="/articles/"><i class="fa-fw fas fa-pencil"></i><span> 隨筆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Markdown</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-08-24T12:10:22.000Z" title="發表於 2022-08-24 20:10:22">2022-08-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2022-08-25T04:08:57.856Z" title="更新於 2022-08-25 12:08:57">2022-08-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Markdown"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Markdown-MD"><a href="#Markdown-MD" class="headerlink" title="Markdown(MD)"></a><strong>Markdown(MD)</strong></h1><ul>
+<li>易讀易寫</li>
+<li>很多軟體和服務支援 (Obsidian, Notion, Github, HackMD…等)  <br/></li>
+</ul>
+<hr>
+<h2 id="資源-Sources"><a href="#資源-Sources" class="headerlink" title="資源 Sources"></a><strong>資源 Sources</strong></h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://markdown.tw/">官方文件(中)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.markdownguide.org/basic-syntax/">官方文件(Eng)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=bTVIMt3XllM">Youtube 教學影片(Eng): Learn Markdown in 30 minutes!</a>  </p>
+<br/></li>
+</ul>
+<hr>
+<h2 id="預覽-Preview"><a href="#預覽-Preview" class="headerlink" title="預覽 Preview"></a><strong>預覽 Preview</strong></h2><p>使用 VS Code 編輯 MD，先打開預覽頁面，可在編輯時同時觀看頁面呈現</p>
+<h4 id="預覽頁面開啟方式"><a href="#預覽頁面開啟方式" class="headerlink" title="預覽頁面開啟方式:"></a>預覽頁面開啟方式:</h4><ul>
+<li>右鍵 –&gt; open preview</li>
+<li>快捷鍵: ctrl + shift + v  <br/></li>
+</ul>
+<hr>
+<h2 id="標題-Title"><a href="#標題-Title" class="headerlink" title="標題 Title"></a><strong>標題 Title</strong></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># H1</span><br><span class="line"></span><br><span class="line">## H2</span><br><span class="line"></span><br><span class="line">### H3</span><br><span class="line"></span><br><span class="line">#### H4</span><br><span class="line"></span><br><span class="line">##### H5</span><br><span class="line"></span><br><span class="line">###### H6</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<hr>
+<h2 id="重點標註-Emphasize"><a href="#重點標註-Emphasize" class="headerlink" title="重點標註 Emphasize"></a><strong>重點標註 Emphasize</strong></h2><p>可以合併使用</p>
+<ul>
+<li><p>粗體</p>
+<ul>
+<li>呈現 <strong>粗體內容</strong></li>
+<li>語法 <code>**粗體內容**</code></li>
+</ul>
+</li>
+<li><p>斜體</p>
+<ul>
+<li>呈現 <em>斜體內容</em></li>
+<li>語法 <code>*斜體內容*</code></li>
+</ul>
+</li>
+<li><p>刪除線</p>
+<ul>
+<li>呈現 <del>劃掉內容</del></li>
+<li>語法 <code>~~劃掉內容~~</code>  <br/></li>
+</ul>
+</li>
+<li><p>引用</p>
+<ul>
+<li><p>呈現</p>
+<blockquote>
+<p>Never Give up, Keep Going.</p>
+</blockquote>
+<p>語法<br><code>&gt; Never Give up, Keep Going.</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="清單-List"><a href="#清單-List" class="headerlink" title="清單 List"></a><strong>清單 List</strong></h2><h3 id="有序-ol"><a href="#有序-ol" class="headerlink" title="有序 ol"></a><strong>有序 ol</strong></h3><p>輸入 1. 2. 3…..，或是全部輸入 1. 1. 1. 使用後者佳，呈現時仍會自動排序，調動順序就不用手動重新編號 <br/></p>
+<p>呈現</p>
+<ol>
+<li>有序清單</li>
+<li>清單有序</li>
+<li>有序的清單</li>
+</ol>
+<p>語法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序清單</span><br><span class="line">1. 清單有序</span><br><span class="line">1. 有序的清單</span><br></pre></td></tr></table></figure>
+
+<h3 id="無序-ul"><a href="#無序-ul" class="headerlink" title="無序 ul"></a><strong>無序 ul</strong></h3><p>呈現</p>
+<ul>
+<li>有序清單</li>
+<li>清單有序</li>
+<li>有序的清單</li>
+</ul>
+<p>語法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 有序清單</span><br><span class="line">- 清單有序</span><br><span class="line">- 有序的清單</span><br></pre></td></tr></table></figure>
+
+  <br/>
+
+<hr>
+<h2 id="連結-Link"><a href="#連結-Link" class="headerlink" title="連結 Link"></a><strong>連結 Link</strong></h2><h3 id="外部連結"><a href="#外部連結" class="headerlink" title="外部連結"></a>外部連結</h3><h4 id="呈現-Markdown-連結教學-Eng"><a href="#呈現-Markdown-連結教學-Eng" class="headerlink" title="呈現 Markdown 連結教學(Eng)"></a>呈現 <a target="_blank" rel="noopener" href="https://youtu.be/bTVIMt3XllM?t=1305">Markdown 連結教學(Eng)</a></h4><h4 id="語法-Markdown連結教學-Eng-https-youtu-be-bTVIMt3XllM-t-1305"><a href="#語法-Markdown連結教學-Eng-https-youtu-be-bTVIMt3XllM-t-1305" class="headerlink" title="語法 [Markdown連結教學(Eng)](https://youtu.be/bTVIMt3XllM?t=1305)"></a>語法 <code>[Markdown連結教學(Eng)](https://youtu.be/bTVIMt3XllM?t=1305)</code></h4><br/>
+
+<h4 id="內部標題跳轉連結"><a href="#內部標題跳轉連結" class="headerlink" title="內部標題跳轉連結"></a>內部標題跳轉連結</h4><h4 id="呈現-預覽"><a href="#呈現-預覽" class="headerlink" title="呈現 預覽"></a>呈現 <a href="#%E9%A0%90%E8%A6%BD-preview">預覽</a></h4><h4 id="語法-預覽-預覽-preview"><a href="#語法-預覽-預覽-preview" class="headerlink" title="語法 [預覽](#預覽-preview)"></a>語法 <code>[預覽](#預覽-preview)</code></h4><br/>
+
+<h3 id="圖片連結"><a href="#圖片連結" class="headerlink" title="圖片連結"></a>圖片連結</h3><h4 id="呈現"><a href="#呈現" class="headerlink" title="呈現 "></a>呈現 <img src="https://geekytheory.com/content/images/2014/03/markdown.png" alt="Markdown"></h4><br/>
+
+<h4 id="語法-Markdown-https-geekytheory-com-content-images-2014-03-markdown-png"><a href="#語法-Markdown-https-geekytheory-com-content-images-2014-03-markdown-png" class="headerlink" title="語法 ![Markdown](https://geekytheory.com/content/images/2014/03/markdown.png)"></a>語法 <code>![Markdown](https://geekytheory.com/content/images/2014/03/markdown.png)</code></h4><br/>
+
+<hr>
+<h2 id="程式碼區塊-Code-Block"><a href="#程式碼區塊-Code-Block" class="headerlink" title="程式碼區塊 Code Block"></a><strong>程式碼區塊 Code Block</strong></h2><h4 id="呈現-1"><a href="#呈現-1" class="headerlink" title="呈現"></a>呈現</h4><p><code>單行標註</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">多行標註</span><br></pre></td></tr></table></figure>
+
+<h4 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h4><p><code>`單行標註`</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">多行標註</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<hr>
+<h2 id="核取方塊"><a href="#核取方塊" class="headerlink" title="核取方塊"></a><strong>核取方塊</strong></h2><p>VS code 不支援 checkbox，可安裝擴充功能 markdown checkboxes (Matt Bierner)</p>
+<h4 id="呈現-2"><a href="#呈現-2" class="headerlink" title="呈現"></a>呈現</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> Task #1</li>
+<li><input disabled="" type="checkbox"> Task #2</li>
+</ul>
+<h4 id="語法-1"><a href="#語法-1" class="headerlink" title="語法"></a>語法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [x] Task #1</span><br><span class="line">- [ ] Task #2</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<hr>
+<h2 id="表格-Table"><a href="#表格-Table" class="headerlink" title="表格 Table"></a><strong>表格 Table</strong></h2><h4 id="呈現-3"><a href="#呈現-3" class="headerlink" title="呈現"></a>呈現</h4><table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Harry Potter</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hermione Granger</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ron Weasley</td>
+</tr>
+</tbody></table>
+<h4 id="語法-2"><a href="#語法-2" class="headerlink" title="語法"></a>語法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| Number | Name             |</span><br><span class="line">| ------ | ---------------- |</span><br><span class="line">| 1      | Harry Potter     |</span><br><span class="line">| 2      | Hermione Granger |</span><br><span class="line">| 3      | Ron Weasley      |</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<hr>
+<h2 id="隱藏說明"><a href="#隱藏說明" class="headerlink" title="隱藏說明"></a><strong>隱藏說明</strong></h2><h4 id="呈現-4"><a href="#呈現-4" class="headerlink" title="呈現"></a>呈現</h4><details>
+ <summary>躲貓貓</summary>
+
+<h4 id="不在這裡喔"><a href="#不在這裡喔" class="headerlink" title="不在這裡喔"></a>不在這裡喔</h4> <br/>
+
+<h2 id="再找找"><a href="#再找找" class="headerlink" title="再找找"></a><em>再找找</em></h2><p>也不是這裡哈哈</p>
+<table>
+<thead>
+<tr>
+<th>哈囉</th>
+<th>你好</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>找錯</td>
+<td>地方拉</td>
+</tr>
+<tr>
+<td>加油</td>
+<td>~~~~</td>
+</tr>
+</tbody></table>
+<p><strong>被你找到了…下次見</strong></p>
+</details>
+
+<h4 id="語法-3"><a href="#語法-3" class="headerlink" title="語法"></a>語法</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span></span><br><span class="line"> <span class="language-xml"><span class="tag">&lt;<span class="name">summary</span>&gt;</span></span>躲貓貓<span class="language-xml"><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="section">#### 不在這裡喔</span></span><br><span class="line"></span><br><span class="line"> <span class="language-xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="section">## <span class="emphasis">_再找找_</span></span></span><br><span class="line"></span><br><span class="line">也不是這裡哈哈</span><br><span class="line"></span><br><span class="line">| 哈囉 | 你好   |</span><br><span class="line">| ---- | ------ |</span><br><span class="line">| 找錯 | 地方拉 |</span><br><span class="line">| 加油 | <span class="code">~~~~   |</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">**被你找到了...下次見**</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/details&gt;</span></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Peggy Lin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="http://example.com/2022/08/24/markdown/">http://example.com/2022/08/24/markdown/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="http://example.com" target="_blank">阿榮的時光膠囊</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/08/24/Hexo/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo</div></div></a></div><div class="next-post pull-right"><a href="/2022/08/24/SASS/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">SASS</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Peggy Lin</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown-MD"><span class="toc-number">1.</span> <span class="toc-text">Markdown(MD)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B3%87%E6%BA%90-Sources"><span class="toc-number">1.1.</span> <span class="toc-text">資源 Sources</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E8%A6%BD-Preview"><span class="toc-number">1.2.</span> <span class="toc-text">預覽 Preview</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A0%90%E8%A6%BD%E9%A0%81%E9%9D%A2%E9%96%8B%E5%95%9F%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">預覽頁面開啟方式:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%99%E9%A1%8C-Title"><span class="toc-number">1.3.</span> <span class="toc-text">標題 Title</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E9%BB%9E%E6%A8%99%E8%A8%BB-Emphasize"><span class="toc-number">1.4.</span> <span class="toc-text">重點標註 Emphasize</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%85%E5%96%AE-List"><span class="toc-number">1.5.</span> <span class="toc-text">清單 List</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F-ol"><span class="toc-number">1.5.1.</span> <span class="toc-text">有序 ol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%84%A1%E5%BA%8F-ul"><span class="toc-number">1.5.2.</span> <span class="toc-text">無序 ul</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%A3%E7%B5%90-Link"><span class="toc-number">1.6.</span> <span class="toc-text">連結 Link</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E9%80%A3%E7%B5%90"><span class="toc-number">1.6.1.</span> <span class="toc-text">外部連結</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%88%E7%8F%BE-Markdown-%E9%80%A3%E7%B5%90%E6%95%99%E5%AD%B8-Eng"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">呈現 Markdown 連結教學(Eng)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AA%9E%E6%B3%95-Markdown%E9%80%A3%E7%B5%90%E6%95%99%E5%AD%B8-Eng-https-youtu-be-bTVIMt3XllM-t-1305"><span class="toc-number">1.6.1.2.</span> <span class="toc-text">語法 [Markdown連結教學(Eng)](https:&#x2F;&#x2F;youtu.be&#x2F;bTVIMt3XllM?t&#x3D;1305)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A7%E9%83%A8%E6%A8%99%E9%A1%8C%E8%B7%B3%E8%BD%89%E9%80%A3%E7%B5%90"><span class="toc-number">1.6.1.3.</span> <span class="toc-text">內部標題跳轉連結</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%88%E7%8F%BE-%E9%A0%90%E8%A6%BD"><span class="toc-number">1.6.1.4.</span> <span class="toc-text">呈現 預覽</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AA%9E%E6%B3%95-%E9%A0%90%E8%A6%BD-%E9%A0%90%E8%A6%BD-preview"><span class="toc-number">1.6.1.5.</span> <span class="toc-text">語法 [預覽](#預覽-preview)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%96%E7%89%87%E9%80%A3%E7%B5%90"><span class="toc-number">1.6.2.</span> <span class="toc-text">圖片連結</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%88%E7%8F%BE"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">呈現 </span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AA%9E%E6%B3%95-Markdown-https-geekytheory-com-content-images-2014-03-markdown-png"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">語法 ![Markdown](https:&#x2F;&#x2F;geekytheory.com&#x2F;content&#x2F;images&#x2F;2014&#x2F;03&#x2F;markdown.png)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A-Code-Block"><span class="toc-number">1.7.</span> <span class="toc-text">程式碼區塊 Code Block</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%88%E7%8F%BE-1"><span class="toc-number">1.7.0.1.</span> <span class="toc-text">呈現</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AA%9E%E6%B3%95"><span class="toc-number">1.7.0.2.</span> <span class="toc-text">語法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%8F%96%E6%96%B9%E5%A1%8A"><span class="toc-number">1.8.</span> <span class="toc-text">核取方塊</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%88%E7%8F%BE-2"><span class="toc-number">1.8.0.1.</span> <span class="toc-text">呈現</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AA%9E%E6%B3%95-1"><span class="toc-number">1.8.0.2.</span> <span class="toc-text">語法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC-Table"><span class="toc-number">1.9.</span> <span class="toc-text">表格 Table</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%88%E7%8F%BE-3"><span class="toc-number">1.9.0.1.</span> <span class="toc-text">呈現</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AA%9E%E6%B3%95-2"><span class="toc-number">1.9.0.2.</span> <span class="toc-text">語法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%B1%E8%97%8F%E8%AA%AA%E6%98%8E"><span class="toc-number">1.10.</span> <span class="toc-text">隱藏說明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%88%E7%8F%BE-4"><span class="toc-number">1.10.0.1.</span> <span class="toc-text">呈現</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%9C%A8%E9%80%99%E8%A3%A1%E5%96%94"><span class="toc-number">1.10.0.2.</span> <span class="toc-text">不在這裡喔</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%8D%E6%89%BE%E6%89%BE"><span class="toc-number">1.11.</span> <span class="toc-text">再找找</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AA%9E%E6%B3%95-3"><span class="toc-number">1.11.0.1.</span> <span class="toc-text">語法</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/08/28/visual%20concepts/" title="icon 設計"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="icon 設計"/></a><div class="content"><a class="title" href="/2022/08/28/visual%20concepts/" title="icon 設計">icon 設計</a><time datetime="2022-08-28T02:08:04.230Z" title="發表於 2022-08-28 10:08:04">2022-08-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/26/template/" title="Title"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Title"/></a><div class="content"><a class="title" href="/2022/08/26/template/" title="Title">Title</a><time datetime="2022-08-26T06:17:25.592Z" title="發表於 2022-08-26 14:17:25">2022-08-26</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/08/26/hello-world/" title="Hello World">Hello World</a><time datetime="2022-08-26T01:30:13.774Z" title="發表於 2022-08-26 09:30:13">2022-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/24/Hexo/" title="Hexo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo"/></a><div class="content"><a class="title" href="/2022/08/24/Hexo/" title="Hexo">Hexo</a><time datetime="2022-08-24T12:10:22.000Z" title="發表於 2022-08-24 20:10:22">2022-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/24/markdown/" title="Markdown"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Markdown"/></a><div class="content"><a class="title" href="/2022/08/24/markdown/" title="Markdown">Markdown</a><time datetime="2022-08-24T12:10:22.000Z" title="發表於 2022-08-24 20:10:22">2022-08-24</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://images.unsplash.com/photo-1515073883629-5e2924e3e106?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Peggy Lin</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

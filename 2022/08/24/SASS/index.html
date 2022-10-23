@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>SASS | 阿榮的時光膠囊</title><meta name="keywords" content="前端"><meta name="author" content="Peggy Lin"><meta name="copyright" content="Peggy Lin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="CSS 樣板語言 - SASSSass: Syntactically Awesome Style Sheets 是 CSS 的樣板語言  解決 CSS 的缺點 每個樣式最後都要加分號，缺少分號，導致前後樣式都出錯 要加一個大括號包住所有樣式 沒辦法一目了然層級關係    SASS 的特性 最後面不需要分號和大括號，打了反而錯 透過縮排來表示層級關係，元素只要跳一行縮排輸入，每個元素打完換行繼續打下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SASS">
+<meta property="og:url" content="http://example.com/2022/08/24/SASS/index.html">
+<meta property="og:site_name" content="阿榮的時光膠囊">
+<meta property="og:description" content="CSS 樣板語言 - SASSSass: Syntactically Awesome Style Sheets 是 CSS 的樣板語言  解決 CSS 的缺點 每個樣式最後都要加分號，缺少分號，導致前後樣式都出錯 要加一個大括號包住所有樣式 沒辦法一目了然層級關係    SASS 的特性 最後面不需要分號和大括號，打了反而錯 透過縮排來表示層級關係，元素只要跳一行縮排輸入，每個元素打完換行繼續打下">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-08-24T12:10:22.000Z">
+<meta property="article:modified_time" content="2022-08-26T07:40:29.530Z">
+<meta property="article:author" content="Peggy Lin">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/08/24/SASS/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'SASS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-26 15:40:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/front-end/"><i class="fa-fw fas fa-television"></i><span> 前端</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bolt"></i><span> creation</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音樂</span></a></li><li><a class="site-page child" href="/artwork/"><i class="fa-fw fa-solid fa-palette"></i><span> 藝術</span></a></li><li><a class="site-page child" href="/articles/"><i class="fa-fw fas fa-pencil"></i><span> 隨筆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">阿榮的時光膠囊</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/front-end/"><i class="fa-fw fas fa-television"></i><span> 前端</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-bolt"></i><span> creation</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音樂</span></a></li><li><a class="site-page child" href="/artwork/"><i class="fa-fw fa-solid fa-palette"></i><span> 藝術</span></a></li><li><a class="site-page child" href="/articles/"><i class="fa-fw fas fa-pencil"></i><span> 隨筆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">SASS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2022-08-24T12:10:22.000Z" title="發表於 2022-08-24 20:10:22">2022-08-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2022-08-26T07:40:29.530Z" title="更新於 2022-08-26 15:40:29">2022-08-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="SASS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="CSS-樣板語言-SASS"><a href="#CSS-樣板語言-SASS" class="headerlink" title="CSS 樣板語言 - SASS"></a><a target="_blank" rel="noopener" href="https://hahow.in/courses/56189df9df7b3d0b005c6639/main?item=5a1e1745a2c4b000589dd21c">CSS 樣板語言 - SASS</a></h1><h3 id="Sass-Syntactically-Awesome-Style-Sheets-是-CSS-的樣板語言"><a href="#Sass-Syntactically-Awesome-Style-Sheets-是-CSS-的樣板語言" class="headerlink" title="Sass: Syntactically Awesome Style Sheets 是 CSS 的樣板語言"></a>Sass: Syntactically Awesome Style Sheets 是 CSS 的樣板語言</h3><br/>
+
+<h2 id="解決-CSS-的缺點"><a href="#解決-CSS-的缺點" class="headerlink" title="解決 CSS 的缺點"></a>解決 CSS 的缺點</h2><ul>
+<li>每個樣式最後都要加分號，缺少分號，導致前後樣式都出錯</li>
+<li>要加一個大括號包住所有樣式</li>
+<li>沒辦法一目了然層級關係  <br/></li>
+</ul>
+<h2 id="SASS-的特性"><a href="#SASS-的特性" class="headerlink" title="SASS 的特性"></a>SASS 的特性</h2><ul>
+<li>最後面不需要分號和大括號，打了反而錯</li>
+<li>透過縮排來表示層級關係，元素只要跳一行縮排輸入，每個元素打完換行繼續打下一個元素</li>
+<li>表現 class 內部的樣式，例如: .namecard h2，與前面元素同一層級，輸入 &amp; h2 來表示</li>
+<li>中間冒號後面記得要空一格</li>
+<li>內部文字是在 「元素後」或是「class 後」空一格輸入  <br/></li>
+</ul>
+<h2 id="變數概念管理色彩-amp-內容"><a href="#變數概念管理色彩-amp-內容" class="headerlink" title="變數概念管理色彩 &amp; 內容"></a>變數概念管理色彩 &amp; 內容</h2><p>為網站設定視覺時，通常會有 3-5 個主要用色，反覆用在按鈕、邊框、背景等地方，如要修改主色，卻沒使用變數，必須要「一個一個剪貼將新色碼貼上」或是用「尋找+取代」，很麻煩又浪費時間</p>
+<p>變數建立: <code>$變數名稱</code></p>
+<ul>
+<li>顏色變數 $color_word: #2D3748</li>
+<li>距離變數 $margin_zero: 0px</li>
+<li>內容變數 $title_front: “範例”</li>
+</ul>
+<p>語法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//- Pug</span><br><span class="line">a.namecard</span><br><span class="line">  h2.name 阿榮</span><br><span class="line">    span.little_eng (Arong)</span><br><span class="line">  h5.job 前端工程師</span><br><span class="line">  hr</span><br><span class="line">  p.description 前端菜鳥，為了轉職努力學習中</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- SASS --&gt;</span><br><span class="line">$color_main: #f24</span><br><span class="line">$color_background: #d1d1d1</span><br><span class="line">$namecard_width: 350px</span><br><span class="line">$namecard_height: 200px</span><br><span class="line"></span><br><span class="line">.namecard</span><br><span class="line">  color: $color_main</span><br><span class="line">  backgound-color: $color_background</span><br><span class="line">  width: $namecard_width</span><br><span class="line">  height: $namecard_height</span><br></pre></td></tr></table></figure>
+
+  <br/>
+
+<h2 id="動態產生模組-mixin-概念"><a href="#動態產生模組-mixin-概念" class="headerlink" title="動態產生模組 mixin 概念"></a>動態產生模組 mixin 概念</h2><p>mixin 是將重複的 css 模組化，且可以帶入參數，依需求客製化模組，方便又保有彈性</p>
+<p>語法範例 1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//- Pug</span><br><span class="line">.block1</span><br><span class="line">.block2</span><br><span class="line">.block3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* SASS */</span></span><br><span class="line"><span class="keyword">@mixin</span> block($<span class="attribute">length</span>:<span class="number">40px</span>, $<span class="attribute">color</span>: black)</span><br><span class="line">  <span class="attribute">width</span>: $length</span><br><span class="line">  <span class="attribute">height</span>: $length</span><br><span class="line">  <span class="attribute">border</span>: solid <span class="number">2px</span> $<span class="attribute">color</span></span><br><span class="line"></span><br><span class="line">.block1</span><br><span class="line">  +block(<span class="number">70px</span>, red)</span><br><span class="line">.block2</span><br><span class="line">  +block(<span class="number">100px</span>, blue)</span><br><span class="line">.block3</span><br><span class="line">  +block(<span class="number">150px</span>, green)</span><br></pre></td></tr></table></figure>
+
+<p>語法範例 2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//- Pug</span><br><span class="line">h3 標題文字</span><br><span class="line">h4 副標題</span><br><span class="line">.button</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* SASS */</span></span><br><span class="line"><span class="keyword">@mixin</span> text($<span class="attribute">font-size</span>: <span class="number">30px</span>, $<span class="attribute">color</span>: red, $<span class="attribute">letter-spacing</span>: <span class="number">20px</span>)</span><br><span class="line">  <span class="attribute">font-size</span>: $font-size</span><br><span class="line">  <span class="attribute">color</span>: $<span class="attribute">color</span></span><br><span class="line">  <span class="attribute">letter-spacing</span>: $letter-spacing</span><br><span class="line"></span><br><span class="line">h3</span><br><span class="line">  +text(<span class="number">30px</span>, #<span class="number">333</span>, <span class="number">2px</span>)</span><br><span class="line">  <span class="attribute">font-family</span>: 微軟正黑體</span><br><span class="line"></span><br><span class="line">h4</span><br><span class="line">  +text(<span class="number">20px</span>, #<span class="number">777</span>, <span class="number">1px</span>)</span><br><span class="line">  <span class="attribute">font-family</span>: 微軟正黑體</span><br><span class="line"></span><br><span class="line">@mixin size($w, $h)</span><br><span class="line">  <span class="attribute">width</span>: $w</span><br><span class="line">  <span class="attribute">height</span>: $h</span><br><span class="line"></span><br><span class="line">.button</span><br><span class="line">  <span class="attribute">border</span>: solid <span class="number">1px</span></span><br><span class="line">  +size(<span class="number">300px</span>, <span class="number">200px</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用-mixin-與累積資源"><a href="#常用-mixin-與累積資源" class="headerlink" title="常用 mixin 與累積資源"></a><a target="_blank" rel="noopener" href="https://codepen.io/mogzbvfl-the-reactor/pen/JjLqZZW">常用 mixin 與累積資源</a></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.block</span><br><span class="line">  .block1</span><br><span class="line">  h3 title</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">  <span class="attribute">font-family</span>: Helvetica, <span class="string">&quot;Microsoft JhengHei&quot;</span></span><br><span class="line"></span><br><span class="line">html, body</span><br><span class="line">  margin: <span class="number">0px</span></span><br><span class="line">  padding: <span class="number">0px</span></span><br><span class="line"></span><br><span class="line">@mixin indep</span><br><span class="line">  position: absolute</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 垂直水平置中 */</span></span><br><span class="line">@mixin center</span><br><span class="line">  position: absolute</span><br><span class="line">  left: <span class="number">50%</span></span><br><span class="line">  top: <span class="number">50%</span></span><br><span class="line">  transform: <span class="built_in">translateX</span>(-<span class="number">50%</span>) <span class="built_in">translateY</span>(-<span class="number">50%</span>)</span><br><span class="line"></span><br><span class="line">@mixin <span class="built_in">trans</span>($s)</span><br><span class="line">  transition: $s</span><br><span class="line"></span><br><span class="line">@mixin <span class="built_in">size</span>($w, $h)</span><br><span class="line">  width: $w</span><br><span class="line">  height: $h</span><br><span class="line"></span><br><span class="line">@mixin fill</span><br><span class="line">  width: <span class="number">100%</span></span><br><span class="line">  height: <span class="number">100%</span></span><br><span class="line"></span><br><span class="line">@mixin <span class="built_in">text</span>($size, $spacing, $color)</span><br><span class="line">  font-size: $size</span><br><span class="line">  letter-spacing: $spacing</span><br><span class="line">  color: $color <span class="meta">!important</span></span><br><span class="line"></span><br><span class="line">.block</span><br><span class="line">  position: relative</span><br><span class="line">  border: solid <span class="number">1px</span></span><br><span class="line">  +<span class="built_in">size</span>(<span class="number">200px</span>, <span class="number">200px</span>)</span><br><span class="line"></span><br><span class="line">.block1</span><br><span class="line">  +center</span><br><span class="line">  +<span class="built_in">size</span>(<span class="number">50px</span>, <span class="number">50px</span>)</span><br><span class="line">  border: solid <span class="number">1px</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">h3</span><br><span class="line">  +center</span><br><span class="line">  margin: <span class="number">0px</span></span><br><span class="line">  +<span class="built_in">text</span>(<span class="number">20px</span>, <span class="number">2px</span>, red)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Peggy Lin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="http://example.com/2022/08/24/SASS/">http://example.com/2022/08/24/SASS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="http://example.com" target="_blank">阿榮的時光膠囊</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2022/08/24/markdown/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Markdown</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Peggy Lin</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-%E6%A8%A3%E6%9D%BF%E8%AA%9E%E8%A8%80-SASS"><span class="toc-number">1.</span> <span class="toc-text">CSS 樣板語言 - SASS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sass-Syntactically-Awesome-Style-Sheets-%E6%98%AF-CSS-%E7%9A%84%E6%A8%A3%E6%9D%BF%E8%AA%9E%E8%A8%80"><span class="toc-number">1.0.1.</span> <span class="toc-text">Sass: Syntactically Awesome Style Sheets 是 CSS 的樣板語言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%B1%BA-CSS-%E7%9A%84%E7%BC%BA%E9%BB%9E"><span class="toc-number">1.1.</span> <span class="toc-text">解決 CSS 的缺點</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SASS-%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">SASS 的特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%8A%E6%95%B8%E6%A6%82%E5%BF%B5%E7%AE%A1%E7%90%86%E8%89%B2%E5%BD%A9-amp-%E5%85%A7%E5%AE%B9"><span class="toc-number">1.3.</span> <span class="toc-text">變數概念管理色彩 &amp; 內容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9F%E6%A8%A1%E7%B5%84-mixin-%E6%A6%82%E5%BF%B5"><span class="toc-number">1.4.</span> <span class="toc-text">動態產生模組 mixin 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8-mixin-%E8%88%87%E7%B4%AF%E7%A9%8D%E8%B3%87%E6%BA%90"><span class="toc-number">1.5.</span> <span class="toc-text">常用 mixin 與累積資源</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/08/28/visual%20concepts/" title="icon 設計"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="icon 設計"/></a><div class="content"><a class="title" href="/2022/08/28/visual%20concepts/" title="icon 設計">icon 設計</a><time datetime="2022-08-28T02:08:04.230Z" title="發表於 2022-08-28 10:08:04">2022-08-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/26/template/" title="Title"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Title"/></a><div class="content"><a class="title" href="/2022/08/26/template/" title="Title">Title</a><time datetime="2022-08-26T06:17:25.592Z" title="發表於 2022-08-26 14:17:25">2022-08-26</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/08/26/hello-world/" title="Hello World">Hello World</a><time datetime="2022-08-26T01:30:13.774Z" title="發表於 2022-08-26 09:30:13">2022-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/24/Hexo/" title="Hexo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo"/></a><div class="content"><a class="title" href="/2022/08/24/Hexo/" title="Hexo">Hexo</a><time datetime="2022-08-24T12:10:22.000Z" title="發表於 2022-08-24 20:10:22">2022-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/24/markdown/" title="Markdown"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Markdown"/></a><div class="content"><a class="title" href="/2022/08/24/markdown/" title="Markdown">Markdown</a><time datetime="2022-08-24T12:10:22.000Z" title="發表於 2022-08-24 20:10:22">2022-08-24</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://images.unsplash.com/photo-1515073883629-5e2924e3e106?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Peggy Lin</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
